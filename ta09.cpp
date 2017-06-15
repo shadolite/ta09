@@ -104,7 +104,33 @@ int main()
          pEmployee[i] = emp;
       }
 
-      else if
+      else
+      {
+         SalaryEmployee* emp = new SalaryEmployee;
+         cout << "Name: ";
+         cin >> name;
 
+         emp->setName(name);
+
+         cout << "Salary: ";
+         cin >> wage;
+         emp->setSalary(wage);
+
+         pEmployee[i] = emp;
+         
+      }
+   }
+   for (int i = 0; i < 3; i++)
+   {
+      pEmployee[i]->display();  
+   }
+
+   for (int i = 0; i < 3; i++)
+   {
+      delete pEmployee[i];
+
+      pEmployee[i] = NULL;
+   }
+   
       return 0;
 }
