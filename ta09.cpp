@@ -15,7 +15,18 @@ using namespace std;
 ***********************************************************************/
 class Employee
 {
-
+private:
+   string name;
+   void setName(const string name)
+   {
+      this->name = name;
+   }
+   
+public:
+   string getName()
+   {
+      return name;
+   }
 };
 
 /**********************************************************************
