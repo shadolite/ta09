@@ -7,6 +7,7 @@
 * ***********************************************************************/
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 /**********************************************************************
@@ -17,15 +18,19 @@ class Employee
 {
 private:
    string name;
-   void setName(const string name)
+   
+public:
+   string getName() const
+   {
+      return name;
+   }
+void setName(const string name)
    {
       this->name = name;
    }
-   
-public:
-   string getName()
+   virtual void display()
    {
-      return name;
+      cout << name << endl;
    }
 };
 
@@ -35,7 +40,16 @@ public:
  ***********************************************************************/
 class HourlyEmployee : public Employee
 {
+private:
+   int hourlyWage;
 
+public:
+   int getHourlyWage() const { return hourlyWage;}
+   void setHourlyWage(int wage) { this->hourlyWage = wage; }
+   virtual void display()
+   {
+      cout << getName() << " - $" << hourlyWage << "/hour\n";
+   }
 };
 
 /**********************************************************************
