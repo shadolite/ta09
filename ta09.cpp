@@ -77,5 +77,34 @@ public:
 ***********************************************************************/
 int main()
 {
-   return 0;
+
+   Employee* pEmployee[3];
+
+
+
+   for (int i = 0; i < 3; i==)
+   {
+      char letter;
+      string name;
+      int wage;
+      cout << "h or s: ";
+      cin >> letter;
+
+      if (letter == 'h')
+      { HourlyEmployee* emp = new HourlyEmployee;
+         cout << "Name: ";
+         cin >> name;
+
+         emp->setName(name);
+
+         cout << "Wage: ";
+         cin >> wage;
+         emp->setHourlyWage(wage);
+
+         pEmployee[i] = emp;
+      }
+
+      else if
+
+      return 0;
 }
