@@ -58,7 +58,17 @@ public:
  ***********************************************************************/
 class SalaryEmployee : public Employee
 {
+private:
+   int salary;
+   
+public:
+   int getSalary() const { return salary; }
+   void setSalary(int salary) { this->salary = salary; }
 
+   virtual void display()
+   {
+      cout << getName() << " - $" << salary << "/year\n";
+   }
 };
 
 /**********************************************************************
